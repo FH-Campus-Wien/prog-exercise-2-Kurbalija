@@ -6,7 +6,25 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        // input your solution here
+        Scanner eingabe = new Scanner(System.in);
+        int counter = 0;
+        float biggest = 0;
+        while(true){
+            counter++;
+            System.out.print("Number "+counter+": ");
+            float zahl = eingabe.nextFloat();
+            if (zahl > biggest) {
+                biggest = zahl;
+            }
+            if(counter == 1 && zahl <= 0) {
+                System.out.println("No number entered.");
+                break;
+            } else if(zahl <= 0) {
+                System.out.print("The largest number is ");
+                System.out.format("%.2f\n", biggest);
+                break;
+            }
+        }
     }
 
     //todo Task 2
@@ -39,7 +57,7 @@ public class App {
 
         System.out.println("Task 1: Largest Number");
         exercise2.largestNumber();
-
+/*
         System.out.println("\nTask 2: Stairs");
         exercise2.stairs();
 
@@ -54,5 +72,6 @@ public class App {
 
         System.out.println("\nTask 6: Fröhliche Zahlen");
         exercise2.happyNumbers();
+ */
     }
 }
