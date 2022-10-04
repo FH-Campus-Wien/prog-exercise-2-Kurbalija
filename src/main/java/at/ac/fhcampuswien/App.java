@@ -29,12 +29,38 @@ public class App {
 
     //todo Task 2
     public void stairs(){
-        // input your solution here
+        Scanner eingabe = new Scanner(System.in);
+        System.out.print("n: ");
+        int row = eingabe.nextInt();
+        int counter = 1;
+        if (row <= 0) {
+            System.out.print("Invalid number!");
+        }
+        for (int b = 1; b <= row ; b++) {
+            for (int i = 1; i <= counter || i <=10; i++) {
+                System.out.print(counter + " ");
+                counter++;
+            }
+            System.out.print("\n");
+        }
     }
 
     //todo Task 3
     public void printPyramid(){
-        // input your solution here
+        int space = 5;
+        int punkt = 1;
+        for(int i=1; i <= 6; i++) {
+            for(int b=1; b <= space; b++) {
+                System.out.print(" ");
+            }
+            for(int b=1; b <= punkt; b++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+            punkt++;
+            punkt++;
+            space--;
+        }
     }
 
     //todo Task 4
@@ -54,13 +80,13 @@ public class App {
 
     public static void main(String[] args){
         App exercise2 = new App();
-
+/*
         System.out.println("Task 1: Largest Number");
         exercise2.largestNumber();
-/*
+*/
         System.out.println("\nTask 2: Stairs");
         exercise2.stairs();
-
+/*
         System.out.println("\nTask 3: Pyramide");
         exercise2.printPyramid();
 

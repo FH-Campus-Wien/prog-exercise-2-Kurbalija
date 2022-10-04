@@ -9,7 +9,7 @@ Please find a task description in the seperate handout on the moodle plattform o
 Good luck :four_leaf_clover:
 - [X] Task 1
 - [ ] Task 2
-- [ ] Task 3
+- [X] Task 3
 - [ ] Task 4
 - [ ] Task 5
 - [ ] Task 6
