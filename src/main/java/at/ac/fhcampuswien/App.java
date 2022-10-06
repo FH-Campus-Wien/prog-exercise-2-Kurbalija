@@ -32,16 +32,16 @@ public class App {
         Scanner eingabe = new Scanner(System.in);
         System.out.print("n: ");
         int row = eingabe.nextInt();
-        int counter = 1;
         if (row <= 0) {
-            System.out.print("Invalid number!");
-        }
-        for (int b = 1; b <= row ; b++) {
-            for (int i = 1; i <= counter || i <=10; i++) {
-                System.out.print(counter + " ");
-                counter++;
+            System.out.println("Invalid number!");
+        } else {
+            int count = 1;
+            for (int i = 1; i <= row; i++) {
+                for (int j = 1; j <= i; j++, count++) {
+                    System.out.print(count+" ");
+                }
+                System.out.println();
             }
-            System.out.print("\n");
         }
     }
 
@@ -70,7 +70,39 @@ public class App {
 
     //todo Task 5
     public void marks(){
-        // input your solution here
+        Scanner eingabe = new Scanner(System.in);
+        int counter = 0;
+        int neg = 0;
+        int sum = 0;
+        float avg = 0;
+        while(true){
+            counter++;
+            System.out.print("Mark " + counter + ": ");
+            int note = eingabe.nextInt();
+            while(true) {
+                if (note < 0 || note > 5) {
+                    System.out.println("Invalid mark!");
+                    counter--;
+                    break;
+                } else {
+                    if (note == 5) {
+                        neg++;
+                    }
+                    sum = note + sum;
+                    break;
+                }
+            }
+            if (note == 0) {
+                counter--;
+                if (counter != 0) {
+                    avg = (float)sum/counter;
+                }
+                System.out.print("Average: ");
+                System.out.format("%.2f\n", avg);
+                System.out.println("Negative marks: "+ neg);
+                break;
+            }
+        }
     }
 
     //todo Task 6
